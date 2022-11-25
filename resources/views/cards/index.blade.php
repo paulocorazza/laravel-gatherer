@@ -27,7 +27,7 @@
     <tr>
         <td scope="row"> {{ $card->id }} </td>
 
-        <td class="text-center">
+        <td scope="row" class="text-center">
             @if( $response["layout"] == 'transform')
             <table>
                 <tr>
@@ -43,7 +43,7 @@
             <img src="{{ $response["image_uris"]["small"] }}">    
             @endif
         </td>
-        <td class="text-center">
+        <td scope="row" class="text-center">
             @switch($card->color)
                 @case("b")
                     @include('components.blackmana')
@@ -65,15 +65,15 @@
                         @break     
             @endswitch
         </td>  
-        <td class="text-center">{{ $card->quantity }}</td> 
-        <td>
+        <td scope="row" class="text-center">{{ $card->quantity }}</td> 
+        <td scope="row">
             <p>{{ $card->type }}</p>
         </td> 
-        <td class="text-center"><p>{{ $card->CMC }}</p></td>
-        <td class="text-center"><p>{{ $card->condition }}</p></td>
-        <td class="text-center"><p>{{ $card->created_at }}</p></td>
-        <td class="text-center"><p>{{ $card->updated_at }}</p></td>
-        <td class="text-center">
+        <td scope="row" class="text-center"><p>{{ $card->CMC }}</p></td>
+        <td scope="row" class="text-center"><p>{{ $card->condition }}</p></td>
+        <td scope="row" class="text-center"><p>{{ $card->created_at }}</p></td>
+        <td scope="row" class="text-center"><p>{{ $card->updated_at }}</p></td>
+        <td scope="row" class="text-center">
             <a class="btn btn-sm btn-info" href="{{ route('cards.show', $card->id) }}"><i class ="fa fa-magnifying-glass"></i> More Details</a>
             <p></p>
             <a href="{{ route('cards.edit', $card->id) }}" class="btn btn-sm btn-secondary"><i class ="fa fa-pencil"></i> Update Card</a>
@@ -81,7 +81,7 @@
             <form id="{{ $card->id }}" action="/cards/delete/{{ $card->id }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button onclick="deleteCard(event);" id="{{ $card->name }}" type="submit" class="btn btn-danger"><i class ="fa fa-trash"></i> Delete</button>
+                <button onclick="deleteCard(event);" id="{{ $card->name }}" type="submit" class="btn btn-sm btn-danger"><i class ="fa fa-trash"></i> Delete</button>
             </form>
         </td>
     </tr>

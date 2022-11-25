@@ -1,6 +1,7 @@
  @include('components.header')
  <main>
      <div class="container">
+        <a href="/cards" class="btn btn-warning">Go back</a>
          <form method="POST">
              @csrf
              <hr>
