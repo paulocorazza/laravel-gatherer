@@ -60,4 +60,35 @@ class CardsController extends Controller
         //Alert::success('Success', $card->name.' deleted ');
         return to_route('cards.index');
     }
+
+    public function showRedCards()
+    {
+        $cards = Card::where('color', '=', 'r')->get();
+        return view('cards.index',compact('cards'));
+    }
+
+    public function showBlackCards()
+    {
+        $cards = Card::where('color', '=', 'b')->get();
+        return view('cards.index',compact('cards'));
+    }
+
+    public function showBlueCards()
+    {
+        $cards = Card::where('color', '=', 'u')->get();
+        return view('cards.index',compact('cards'));
+    }
+
+    public function showWhiteCards()
+    {
+        $cards = Card::where('color', '=', 'w')->get();
+        return view('cards.index',compact('cards'));
+    }
+
+
+    public function showGreenCards()
+    {
+        $cards = Card::where('color', '=', 'g')->get();
+        return view('cards.index',compact('cards'));
+    }
 }
