@@ -1,4 +1,4 @@
-@include('components.header')
+@include('header')
 @php    
     $name = preg_replace('/\s+/', '_', $card->name);    
     $search = Http::get('https://api.scryfall.com/cards/named?exact='.strtolower($name));
@@ -202,19 +202,41 @@
            <p></p>
            <hr>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <div class="form-group">
-                        <a class="btn btn-secondary" href="{{  $response["related_uris"]["gatherer"]  }}" class="text-white" >See this card in Gatherer</a>
+                        <a class="btn btn-secondary" href="{{  $response["related_uris"]["gatherer"]  }}" class="text-white" >Gatherer</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <div class="form-group">
-                        <a class="btn btn-secondary" href="{{  $response["related_uris"]["tcgplayer_infinite_articles"]  }}" class="text-white" >See Articles with this card in TCG Player</a>
+                        <a class="btn btn-secondary" href="{{  $response["related_uris"]["tcgplayer_infinite_articles"]  }}" class="text-white" >TCG Player</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <div class="form-group">
-                        <a class="btn btn-secondary" href="{{  $response["related_uris"]["tcgplayer_infinite_decks"]  }}" class="text-white" >See Decks with this card in TCG Player</a>
+                        <a class="btn btn-secondary" href="{{  $response["related_uris"]["tcgplayer_infinite_decks"]  }}" class="text-white" >TCG Player Decks</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <a class="btn btn-secondary" href="https://scryfall.com/search?as=grid&order=name&q={{ $card->name }}+(game%3Apaper)" class="text-white" >Scryfall</a>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-2">
+                    <div class="form-group">
+                        @php
+                        $lowerName = strtolower($card->name);
+                        $name = preg_replace('/\s+/', '-',$lowerName);
+                        @endphp   
+                        <a class="btn btn-secondary" href="https://edhrec.com/cards/{{$name}}" class="text-white" >edhrec</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <a class="btn btn-secondary" href="https://www.ligamagic.com.br/?view=cards/card&card={{ $card->name }}" class="text-white" >LigaMagic</a>
                     </div>
                 </div>
             </div>
@@ -222,4 +244,4 @@
         </div>
     </div>
 </form>
-@include('components.footer')
+@include('footer')

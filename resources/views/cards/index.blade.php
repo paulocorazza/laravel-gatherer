@@ -1,4 +1,4 @@
-@include('components.header')
+@include('header')
 @include('sweetalert::alert')
 <div class="col-md-4">
     <a class="btn btn-success" href="{{ route('cards.create') }}">New Card</a>
@@ -40,7 +40,7 @@
                 </tr>
             </table>
             @else
-            <img src="{{ $response["image_uris"]["small"] }}">    
+            <img src="{{ $response["image_uris"]["small"] }}"> <p>{{ $card->name }}</p>  
             @endif
         </td>
         <td scope="row" class="text-center">
@@ -62,7 +62,16 @@
                         @break
                 @case("c")
                     @include('components.wastesmana')
-                        @break     
+                        @break
+                @case("ur")
+                    @include('components.ravnica-guilds.izzet')
+                        @break
+                @case("rw")
+                    @include('components.ravnica-guilds.boros')
+                        @break
+                @case("urb")
+                    @include('components.alara-shards.grixis')
+                        @break       
             @endswitch
         </td>  
         <td scope="row" class="text-center">{{ $card->quantity }}</td> 
@@ -114,4 +123,4 @@
     }
 </script>
 </table>
-@include('components.footer')
+@include('footer')

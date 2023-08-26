@@ -1,4 +1,4 @@
- @include('components.header')
+ @include('header')
  <main>
      <div class="container">
         <a href="/cards" class="btn btn-warning">Go back</a>
@@ -56,6 +56,27 @@
                                 <option value="b">black</option>
                                 <option value="g">green</option>
                                 <option value="c">wastes</option>
+                                <option value="ur">izzet</option>
+                                <option value="rw">boros</option>
+                                <option value="uw">azorius</option>
+                                <option value="bg">golgari</option>
+                                <option value="ub">dimir</option>
+                                <option value="ug">simic</option>
+                                <option value="gw">selesnya</option>
+                                <option value="gr">gruul</option>
+                                <option value="br">rakdos</option>
+                                <option value="bw">orzhov</option>
+                                <option value="wug">bant</option>
+                                <option value="urb">grixis</option>
+                                <option value="rwb">mardu</option>
+                                <option value="urw">jeskai</option>
+                                <option value="wbg">abzan</option>
+                                <option value="grw">naya</option>
+                                <option value="wub">esper</option>
+                                <option value="rug">temur</option>
+                                <option value="bug">sultai</option>
+                                <option value="brg">jund</option>
+                               
                             </select>
                         </div>
                        <p></p>
@@ -81,4 +102,4 @@
          </form>
      </div>
  </main>
- @include('components.footer')
+ @include('footer')

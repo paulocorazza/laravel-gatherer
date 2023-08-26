@@ -1,4 +1,4 @@
-@include('components.header')
+@include('header')
 @include('sweetalert::alert')
 @php    
     $name = preg_replace('/\s+/', '_', $card->name);    
@@ -80,4 +80,4 @@
         </form>
     </div>
 </main>
-@include('components.footer')
+@include('footer')

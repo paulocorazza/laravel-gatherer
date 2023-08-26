@@ -25,19 +25,19 @@
                           <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                               <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/red-cards">Red cards</a>
+                                <a class="nav-link active" aria-current="page" href="/cards/red">Red cards</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/black-cards">Black cards</a>
+                                <a class="nav-link active" aria-current="page" href="/cards/black">Black cards</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/blue-cards">Blue cards</a>
+                                <a class="nav-link active" aria-current="page" href="/cards/blue">Blue cards</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/white-cards">White cards</a>
+                                <a class="nav-link active" aria-current="page" href="/cards/white">White cards</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/green-cards">Green cards</a>
+                                <a class="nav-link active" aria-current="page" href="/cards/green">Green cards</a>
                               </li>
                             </ul>
                           </div>
