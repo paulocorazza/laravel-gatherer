@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CardsController;
+use App\Http\Controllers\GuildsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,7 @@ Route::get('/cards/black',[CardsController::class,'showblackcards'])->name('card
 Route::get('/cards/blue',[CardsController::class,'showbluecards'])->name('cards.showbluecards');
 Route::get('/cards/white',[CardsController::class,'showwhitecards'])->name('cards.showwhiteards');
 Route::get('/cards/green',[CardsController::class,'showgreencards'])->name('cards.showgreends');
+
+//guids
+
+Route::get('/guilds',[GuildsController::class, 'index'])->name('guilds.index');
