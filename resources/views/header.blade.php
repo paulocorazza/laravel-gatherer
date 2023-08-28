@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <title>Laravel - Gatherer</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="//cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -16,34 +16,64 @@
         <div class="container mt-4">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <div class="container-fluid">
-                          <a class="navbar-brand" href="/cards">cards</a>
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/cards/red">Red cards</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/cards/black">Black cards</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/cards/blue">Blue cards</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/cards/white">White cards</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/cards/green">Green cards</a>
-                              </li>
+                  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Laravel Gatherer</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/cards">Cards</a>
+                          </li>
+                          
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Cards by colour
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/cards/green">Green cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/red">Red cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/blue">Blue cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/white">White cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/black">Black cards</a></li>
                             </ul>
-                          </div>
-                        </div>
-                      </nav>
-                    <h1 class="display-4 text-center">Gatherer</h1>
+                            
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Cards by type
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/cards/green">Green cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/red">Red cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/blue">Blue cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/white">White cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/black">Black cards</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Guilds | Shards
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/guilds">Guilds</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="/cards/red">Red cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/blue">Blue cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/white">White cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/black">Black cards</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
                     <p class="lead text-center">My personal Magic: The Gathering collection</p>
                 </div>
             </div>

@@ -4,6 +4,7 @@
     <a class="btn btn-success" href="{{ route('cards.create') }}">New Card</a>
 </div>
 <p></p>
+
 <table class="table table-hover table-bordered">
 <thead>
     <th class="text-center">ID</th>
