@@ -46,11 +46,12 @@
                               Cards by type
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/cards/green">Green cards</a></li>
-                              <li><a class="dropdown-item" href="/cards/red">Red cards</a></li>
-                              <li><a class="dropdown-item" href="/cards/blue">Blue cards</a></li>
-                              <li><a class="dropdown-item" href="/cards/white">White cards</a></li>
-                              <li><a class="dropdown-item" href="/cards/black">Black cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/creature">Creature cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/instant">Instant cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/Sorcery">Sorcery cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/artifact">Artifacts cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/enchantment">Enchantment cards</a></li>
+                              <li><a class="dropdown-item" href="/cards/planeswalker">Planeswalker cards</a></li>
                             </ul>
                           </li>
                           <li class="nav-item dropdown">
@@ -58,9 +59,9 @@
                              Guilds | Shards
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/guilds">Guilds</a></li>
+                              <li><a class="dropdown-item" href="/guilds">All Guilds</a></li>
                               <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="/cards/red">Red cards</a></li>
+                              <li><a class="dropdown-item" href="/guilds/izzet">Izzet</a></li>
                               <li><a class="dropdown-item" href="/cards/blue">Blue cards</a></li>
                               <li><a class="dropdown-item" href="/cards/white">White cards</a></li>
                               <li><a class="dropdown-item" href="/cards/black">Black cards</a></li>

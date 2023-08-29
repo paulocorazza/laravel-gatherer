@@ -41,7 +41,7 @@
                 </tr>
             </table>
             @else
-            <img src="{{ $response["image_uris"]["small"] }}"> <p>{{ $card->name }}</p>  
+            <img src="{{ $response["image_uris"]["small"] }}"> <p id="{{ $card->name }}">{{ $card->name }}</p>  
             @endif
         </td>
         <td scope="row" class="text-center">
@@ -83,7 +83,7 @@
         <td scope="row" class="text-center"><p>{{ $card->condition }}</p></td>
         <td scope="row" class="text-center"><p>{{ $card->created_at }}</p></td>
         <td scope="row" class="text-center"><p>{{ $card->updated_at }}</p></td>
-        <td scope="row" class="text-center">
+        <td class="text-center">
             <a class="btn btn-sm btn-info" href="{{ route('cards.show', $card->id) }}"><i class ="fa fa-magnifying-glass"></i> More Details</a>
             <p></p>
             <a href="{{ route('cards.edit', $card->id) }}" class="btn btn-sm btn-secondary"><i class ="fa fa-pencil"></i> Update Card</a>
@@ -91,14 +91,14 @@
             <form id="{{ $card->id }}" action="/cards/delete/{{ $card->id }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button onclick="deleteCard(event);" id="{{ $card->name }}" type="submit" class="btn btn-sm btn-danger"><i class ="fa fa-trash"></i> Delete</button>
+                <button onclick="deleteCard(event);" id="{{ $card->name }}" type="submit" class="btn btn-danger"><i class ="fa fa-trash"></i> Delete</button>
             </form>
         </td>
     </tr>
     @endforeach
 </tbody>
 <script>
-    function deleteCard(event) {
+   function deleteCard(event) {
         event.preventDefault();
         let id = document.getElementsByTagName("form")[0].id;
         let form = document.getElementById(id);

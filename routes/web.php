@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); 
 });
+
 
 //Route::resource('/cards',CardsController::class);
 Route::get('/cards', [CardsController::class, 'index'])->name('cards.index');
@@ -36,3 +37,6 @@ Route::get('/cards/green',[CardsController::class,'showgreencards'])->name('card
 //guids
 
 Route::get('/guilds',[GuildsController::class, 'index'])->name('guilds.index');
+Route::get('/guilds/izzet',function(){
+    return view('guilds.izzet');
+});
