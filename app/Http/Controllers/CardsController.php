@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Card;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 Use Alert;
 
 
@@ -12,6 +13,9 @@ class CardsController extends Controller
 {
     public function index(Request $request)
     {
+        // if(Auth::check()){
+        //     throw new AuthenticationException();
+        // }
         $cards = Card::All();
         //DB::table('cards')->truncate();
         return view('cards.index',compact('cards'));

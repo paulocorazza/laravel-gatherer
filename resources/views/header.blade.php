@@ -67,6 +67,14 @@
                               <li><a class="dropdown-item" href="/cards/black">Black cards</a></li>
                             </ul>
                           </li>
+                          {{-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Logout
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                            </ul>
+                          </li> --}}
                         </ul>
                         <form class="d-flex" role="search">
                           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
